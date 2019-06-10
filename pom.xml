@@ -12,19 +12,35 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.mongodb</groupId>
+            <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
             <version>3.7.1</version>
         </dependency>
         <dependency>
-            <groupId>com.mongodb</groupId>
+            <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver</artifactId>
             <version>3.7.0</version>
         </dependency>
         <dependency>
-            <groupId>org.json</groupId>
+            <groupId>org.mongodb</groupId>
             <artifactId>bson</artifactId>
             <version>3.4.3</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
 </project>
